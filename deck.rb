@@ -13,12 +13,11 @@ class Desk
     end
   end
 
-  def deal_card(hand)
+  def deal_card(_hand)
     @hand.cards << @cards.slice!(0)
   end
 
   def shuffle
     @cards.shuffle
   end
-
 end

@@ -1,5 +1,4 @@
 class Card
-
   def initialize(lear, face)
     @lear = lear
     @face = face
@@ -7,11 +6,10 @@ class Card
 
   def value
     return @face if @face.is_a?(Integer)
-    @face.eql?("A") ? 11 : 10
+    @face.eql?('A') ? 11 : 10
   end
 
   def show
     puts "#{@face} #{@lear}"
   end
-
 end
