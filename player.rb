@@ -17,5 +17,10 @@ class Player
     bank if @player_bank <= 0 || @dealer_bank <= 0
     @game_bank = 0
     @desk = Desk.new
+    @desk.shuffle
+    @player_hand = Hand.new
+    @dealer_hand = Hand.new
+
+    deal_cards
   end
 end
