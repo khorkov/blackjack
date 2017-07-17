@@ -1,5 +1,4 @@
 class Hand
-
   attr_accessor :cards
 
   def initialize
@@ -19,11 +18,10 @@ class Hand
   end
 
   def display
-    @cards.each { |card| puts "#{card.display}" }
+    @cards.each { |card| puts card.display.to_s }
   end
 
   def display_hidden
-    @cards.count.times { puts "🂠 "  }
+    @cards.count.times { puts '🂠 ' }
   end
-
 end
