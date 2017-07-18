@@ -9,7 +9,7 @@ class Card
     @face.eql?("A") ? 11 : 10
   end
 
-  def show
-    puts "#{@face} #{@lear}"
+  def display
+    "#{@face}#{@lear}"
   end
 end

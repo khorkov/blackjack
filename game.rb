@@ -35,19 +35,19 @@ class Game
 
   def deal_cards
     2.times { @deck.deal_card(@player_hand) }
-    2.times { @deck.deal_card @dealer_hand }
+    2.times { @deck.deal_card(@dealer_hand) }
   end
 
   def info
     system "clear"
-    puts 'Дилер:'
+    puts "Дилер:"
     puts "#{@dealer_bank}$"
     @player_hand.cards.count == 2 ? @dealer_hand.display_hidden : @dealer_hand.display
-    puts "-" * 20
+    puts "\n--------------------"
     @player_hand.display
-    puts "#{@name}:"
+    puts "\n#{@name}:"
     puts "#{@player_bank}$"
-    puts "Счет #{@name}: #{@player_hand.value}"
+    puts "Счет #{@name}a: #{@player_hand.value}"
   end
 
   def menu
@@ -60,7 +60,7 @@ class Game
     dealer_step if choose == 1
     player_step if choose == 2
     who_win?    if choose == 3
-    exit_game if choose  ==  4
+    exit_game   if choose == 4
   end
 
   def dealer_step
@@ -79,6 +79,10 @@ class Game
     draw?
     player_win?
     dealer_win?
+  end
+
+  def exit_game
+    exit
   end
 
   def draw?
