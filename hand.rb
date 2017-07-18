@@ -18,10 +18,10 @@ class Hand
   end
 
   def display
-    @cards.each { |card| print "#{card.display} "  }
+    @cards.each { |card| print "#{card.display} " }
   end
 
   def display_hidden
-    @cards.count.times { print "🂠 "  }
+    @cards.count.times { print '🂠 ' }
   end
 end

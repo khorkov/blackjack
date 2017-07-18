@@ -7,11 +7,8 @@ Metrics/MethodLength:
 Metrics/ClassLength:
   Max: 1500
 
-Style/AsciiComments:
-  Enabled: false
-
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
 
 Documentation:
   Enabled: false

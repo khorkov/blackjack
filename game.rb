@@ -1,6 +1,6 @@
 class Game
   def initialize
-    puts "Как вас зовут?"
+    puts 'Как вас зовут?'
     @name = gets.chomp.capitalize
     bank
     start_game
@@ -39,8 +39,8 @@ class Game
   end
 
   def info
-    system "clear"
-    puts "Дилер:"
+    system 'clear'
+    puts 'Дилер:'
     puts "#{@dealer_bank}$"
     @player_hand.cards.count == 2 ? @dealer_hand.display_hidden : @dealer_hand.display
     puts "\n--------------------"
