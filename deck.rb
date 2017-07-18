@@ -1,10 +1,10 @@
-class Desk
+class Deck
   attr_accessor :cards
 
   LEAR = %w[♣ ♥ ♠ ♦].freeze
-  FACES = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'].freeze
+  FACES = (2..10).to_a << "J" << "Q" << "K" << "A"
 
-  def initalize
+  def initialize
     @cards = []
     LEAR.each do |lear|
       FACES.each do |face|
@@ -13,11 +13,11 @@ class Desk
     end
   end
 
-  def deal_card(_hand)
-    @hand.cards << @cards.slice!(0)
+  def deal_card(hand)
+    hand.cards << @cards.slice!(0)
   end
 
   def shuffle
-    @cards.shuffle
+    @cards.shuffle!
   end
 end
